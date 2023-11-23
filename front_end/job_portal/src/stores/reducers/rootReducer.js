@@ -1,10 +1,9 @@
 import { combineReducers } from "redux";
-import categoryReducer from "./categoryReducer";
-import productReducer from "./productReducer";
+import jobReducer from "./jobReducer";
 
 const reducers = combineReducers({
   categoryReducer: categoryReducer,
-  productReducer: productReducer,
+  jobReducer: jobReducer,
 });
 
 export default reducers;

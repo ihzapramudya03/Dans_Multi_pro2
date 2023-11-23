@@ -1,4 +1,4 @@
-export const SET_PRODUCTS = "SET_PRODUCTS";
+export const SET_JOBS = "SET_JOBS";
 export const SET_LOADING = "SET_LOADING";
 export const SET_ERROR = "SET_ERROR";
-export const SET_PRODUCTS_DETAIL = "SET_PRODUCTS_DETAIL";
+export const SET_JOBS_DETAIL = "SET_JOBS_DETAIL";

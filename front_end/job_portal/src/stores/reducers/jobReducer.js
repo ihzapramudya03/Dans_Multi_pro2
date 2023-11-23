@@ -1,12 +1,12 @@
 import {
   SET_ERROR,
-  SET_PRODUCTS,
+  SET_JOBS,
   SET_LOADING,
-  SET_PRODUCTS_DETAIL,
+  SET_JOBS_DETAIL,
 } from "../actionTypes";
 
 const initialState = {
-  products: [],
+  jobs: [],
   detail: [],
   isLoading: true,
   error: null,
@@ -14,9 +14,9 @@ const initialState = {
 
 function taskReducer(state = initialState, { type, payload }) {
   switch (type) {
-    case SET_PRODUCTS:
-      return { ...state, products: payload };
-    case SET_PRODUCTS_DETAIL:
+    case SET_JOBS:
+      return { ...state, jobs: payload };
+    case SET_JOBS_DETAIL:
       return {
         ...state,
         detail: payload,

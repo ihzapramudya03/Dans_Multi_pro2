@@ -133,12 +133,12 @@ class Controller {
 
   static async jobById(req, res, next) {
     try {
-      let product = await Job.findOne({
+      let job = await Job.findOne({
         where: {
           id: req.params.id,
         },
       });
-      res.status(200).json(product);
+      res.status(200).json(job);
     } catch (error) {
       next(error);
     }

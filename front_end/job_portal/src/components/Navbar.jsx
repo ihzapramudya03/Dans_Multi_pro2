@@ -40,7 +40,7 @@ export default function Example() {
                   <div className="relative flex">
                     <div className="relative z-10 flex items-center transition-colors ease-out duration-200 text-sm font-medium border-b-2 -mb-px pt-px">
                       <Link
-                        to="/products"
+                        to="/jobs"
                         className="text-sm font-medium text-gray-700 hover:text-gray-800"
                       >
                         Jobs

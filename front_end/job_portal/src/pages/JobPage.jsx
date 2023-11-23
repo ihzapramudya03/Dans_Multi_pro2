@@ -1,7 +1,7 @@
 import { useNavigate } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
 import { useEffect } from "react";
-import { fetchProducts } from "../stores/actionCreators/products";
+import { fetchJobs } from "../stores/actionCreators/jobs";
 const callouts = [
   {
     name: "Data Engineer",
@@ -34,10 +34,10 @@ const callouts = [
 export default function Example() {
   const navigate = useNavigate();
   const dispatch = useDispatch();
-  const { products, isLoading, error } = useSelector((state) => state);
+  const { jobs, isLoading, error } = useSelector((state) => state);
 
   useEffect(() => {
-    dispatch(fetchProducts());
+    dispatch(fetchJobs());
   }, []);
 
   const handleDetail = (id) => {
@@ -84,19 +84,19 @@ export default function Example() {
           {error && <p>Error...</p>}
           {isLoading &&
             !error &&
-            products.map((product) => (
+            jobs.map((job) => (
               <a
-                onClick={() => handleDetail(product.id)}
-                key={product.id}
+                onClick={() => handleDetail(job.id)}
+                key={job.id}
                 className="group"
               >
                 <div className="w-full aspect-w-1 aspect-h-1 bg-gray-200 rounded-lg overflow-hidden xl:aspect-w-7 xl:aspect-h-8">
 
                 </div>
-                <h3 className="mt-4 text-sm text-gray-700">{product.title}</h3>
-                Job Description : <h3 className="mt-4 text-sm text-gray-700">{product.description}</h3>
+                <h3 className="mt-4 text-sm text-gray-700">{job.title}</h3>
+                Job Description : <h3 className="mt-4 text-sm text-gray-700">{job.description}</h3>
                 <p className="mt-1 text-lg font-medium text-gray-900">
-                  Location : {product.location}
+                  Location : {job.location}
                 </p>
               </a>
             ))}

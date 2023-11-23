@@ -1,14 +1,14 @@
 import {
   SET_LOADING,
-  SET_PRODUCTS,
+  SET_JOBS,
   SET_ERROR,
-  SET_PRODUCTS_DETAIL,
+  SET_JOBS_DETAIL,
 } from "../actionTypes";
 
 const urlServer =
   "http://localhost:3000/jobList";
 
-export function fetchProducts() {
+export function fetchJobs() {
   return async (dispatch) => {
     try {
       const response = await fetch(urlServer, {
@@ -22,14 +22,14 @@ export function fetchProducts() {
       if (!response.ok) {
         throw new Error(response.message);
       }
-      return dispatch({ type: SET_PRODUCTS, payload: data.data.job });
+      return dispatch({ type: SET_JOBS, payload: data.data.job });
     } catch (err) {
       console.log(err);
     }
   };
 }
 
-export function fetchProductsDetail(id) {
+export function fetchJobDetail(id) {
   return async (dispatch) => {
     try {
       const response = await fetch(`${urlServer}/${id}`, {
@@ -42,7 +42,7 @@ export function fetchProductsDetail(id) {
       if (!response.ok) {
         throw new Error(response.message);
       }
-      return dispatch({ type: SET_PRODUCTS_DETAIL, payload: data });
+      return dispatch({ type: SET_JOBS_DETAIL, payload: data });
     } catch (err) {
       console.log(err);
     }

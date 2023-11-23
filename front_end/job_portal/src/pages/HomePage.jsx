@@ -17,7 +17,7 @@ export default function Example() {
                   “The future depends on what you do today” - Mahatma Gandhi
                 </p>
                 <Link
-                  to="products"
+                  to="jobs"
                   className="inline-block w-2/5 text-center s bg-pink-400 border border-transparent rounded-md mt-5 py-3 px-8 font-medium text-white hover:bg-indigo-700"
                 >
                   Get Job
